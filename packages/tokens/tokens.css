@@ -1,0 +1,218 @@
+/* EduFlow — tokens de design v0.1 (origem: EduFlow/brand/03-conceito/tokens.css)
+   As fontes vêm do next/font (--font-bricolage, --font-instrument, --font-jetbrains).
+   Conceito: "Gabarito em Fluxo" — ponto (bolha/cursor) + linha (progresso).
+   Tema base: claro ("papel + tinta"). Escuro em [data-theme="dark"].
+   Camadas: primitivos (--p-*) → semânticos (--*) */
+
+
+:root {
+  /* ---------- Primitivos ---------- */
+  /* Petróleo — primária (tinta, seriedade) */
+  --p-petroleo-50: #eef6f6;
+  --p-petroleo-100: #d3e8e9;
+  --p-petroleo-200: #a8d1d3;
+  --p-petroleo-300: #74b3b7;
+  --p-petroleo-400: #3f9196;
+  --p-petroleo-500: #1f757b;
+  --p-petroleo-600: #145e64;
+  --p-petroleo-700: #0f4c51;
+  --p-petroleo-800: #0c3c40;
+  --p-petroleo-900: #092e31;
+  --p-petroleo-950: #051c1e;
+
+  /* Lima — acento (cursor de terminal + marca-texto). Nunca como cor de texto sobre claro. */
+  --p-lima-100: #f6fdd0;
+  --p-lima-200: #edfa9e;
+  --p-lima-300: #dff35f;
+  --p-lima-400: #cde832;
+  --p-lima-500: #afcb18;
+  --p-lima-600: #879d10;
+  --p-lima-700: #66770f;
+
+  /* Brasa — acento de origem (nod à AESA). Só celebração e selo. */
+  --p-brasa-100: #ffe6d8;
+  --p-brasa-400: #f5834a;
+  --p-brasa-500: #e8652a;
+  --p-brasa-600: #c44e1a;
+
+  /* Papel / grafite — neutros quentes */
+  --p-papel-0: #ffffff;
+  --p-papel-50: #faf8f3;
+  --p-papel-100: #f3f0e8;
+  --p-papel-200: #e6e2d7;
+  --p-papel-300: #d1ccbf;
+  --p-papel-400: #a8a396;
+  --p-papel-500: #7e796e;
+  --p-papel-600: #5c5850;
+  --p-papel-700: #3f3c37;
+  --p-papel-800: #2a2825;
+  --p-papel-900: #1c1b19;
+  --p-papel-950: #121110;
+
+  /* ---------- Semânticos (tema claro) ---------- */
+  --bg: var(--p-papel-50);
+  --surface: var(--p-papel-0);
+  --surface-sunken: var(--p-papel-100);
+  --border: var(--p-papel-200);
+  --border-strong: var(--p-papel-300);
+
+  --text: var(--p-papel-900);
+  --text-muted: var(--p-papel-600);
+  --text-subtle: var(--p-papel-500); /* só textos grandes ou desabilitados */
+  --text-on-action: var(--p-papel-0);
+
+  --action: var(--p-petroleo-600);
+  --action-hover: var(--p-petroleo-700);
+  --action-soft: var(--p-petroleo-50);
+  --link: var(--p-petroleo-600);
+  --focus: var(--p-petroleo-400);
+
+  --accent: var(--p-lima-400);       /* ponto preenchido, cursor, destaque */
+  --accent-soft: var(--p-lima-200);  /* marca-texto */
+  --text-on-accent: var(--p-petroleo-950);
+  --origin: var(--p-brasa-500);
+
+  --success: #1a7343;
+  --success-soft: #e3f4ea;
+  --error: #b9382c;
+  --error-soft: #fbe7e4;
+  --warning: #87600f;
+  --warning-soft: #fbf0d9;
+  --info: var(--p-petroleo-600);
+  --info-soft: var(--p-petroleo-50);
+
+  /* Linha (fluxo) */
+  --line: var(--p-papel-300);
+  --line-done: var(--p-petroleo-600);
+
+  /* IDE / terminal — sempre escuros */
+  --code-bg: #0f1a1c;
+  --code-border: #22353a;
+  --code-text: #d9e3e1;
+  --code-muted: #869896;
+  --code-keyword: #7fd1d6;
+  --code-string: var(--p-lima-400);
+  --code-number: var(--p-brasa-400);
+  --code-function: #e9d7a8;
+  --code-error: #ff7a6b;
+
+  /* Gráficos (dashboards T27/T34) — validados com o validador de paleta:
+     ordem fixa, nunca reciclar; scatter/bolhas: no máximo 3 séries. */
+  --chart-1: #00939a; /* petróleo vivo */
+  --chart-2: #e8652a; /* brasa */
+  --chart-3: #7a63d6; /* violeta */
+  --chart-4: #c48a00; /* ocre */
+  --chart-5: #c2457e; /* framboesa */
+  --chart-6: #4d8f2a; /* verde */
+  --chart-7: #3b6fd1; /* azul */
+  --chart-8: #d9443b; /* vermelho (série, não erro) */
+  /* Sequencial ordinal (petróleo): claro → escuro */
+  --chart-seq-1: #74b3b7; --chart-seq-2: #3f9196; --chart-seq-3: #1f757b; --chart-seq-4: #0f4c51; --chart-seq-5: #092e31;
+  --chart-grid: var(--p-papel-200);
+  --chart-axis: var(--p-papel-300);
+
+  /* Tipografia */
+  --font-display: var(--font-bricolage), "Bricolage Grotesque", system-ui, sans-serif;
+  --font-text: var(--font-instrument), "Instrument Sans", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
+
+  /* Escala 1.25 */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.563rem;
+  --fs-2xl: 1.953rem;
+  --fs-3xl: 2.441rem;
+  --fs-4xl: 3.815rem;
+
+  /* Espaço (base 4) */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px;
+  --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px;
+
+  /* Raios — 3 níveis + ponto */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 18px;
+  --r-ponto: 40%;
+
+  --shadow-1: 0 1px 2px rgb(28 27 25 / 0.06), 0 1px 1px rgb(28 27 25 / 0.04);
+  --shadow-2: 0 6px 20px rgb(28 27 25 / 0.08), 0 2px 6px rgb(28 27 25 / 0.05);
+
+  --dur-fast: 150ms;
+  --dur: 280ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  color-scheme: light;
+}
+
+/* ---------- Semânticos (tema escuro, opcional) ---------- */
+:root[data-theme="dark"] {
+  --bg: #101618;
+  --surface: #172023;
+  --surface-sunken: #0c1214;
+  --border: #243236;
+  --border-strong: #2f4146;
+
+  --text: #eceae4;
+  --text-muted: #a3aba9;
+  --text-subtle: #7d8886;
+  --text-on-action: var(--p-petroleo-950);
+
+  --action: #5fb0b5;
+  --action-hover: #7fc3c7;
+  --action-soft: #15302f;
+  --link: #7fc3c7;
+  --focus: #7fc3c7;
+
+  --accent: var(--p-lima-300);
+  --accent-soft: #3a4410;
+  --origin: var(--p-brasa-400);
+
+  --success: #5cc78a;
+  --success-soft: #133222;
+  --error: #ff8a7d;
+  --error-soft: #3a1714;
+  --warning: #e5b65a;
+  --warning-soft: #33280f;
+  --info: #7fc3c7;
+  --info-soft: #15302f;
+
+  --line: #2f4146;
+  --line-done: #5fb0b5;
+
+  --chart-1: #1d9fa5; --chart-2: #e06930; --chart-3: #8a78de; --chart-4: #b8860a;
+  --chart-5: #cd5d8c; --chart-6: #5a9837; --chart-7: #5a84d8; --chart-8: #dc574f;
+  --chart-seq-1: #d3e8e9; --chart-seq-2: #a8d1d3; --chart-seq-3: #74b3b7; --chart-seq-4: #3f9196; --chart-seq-5: #1f757b;
+  --chart-grid: #243236;
+  --chart-axis: #2f4146;
+
+  --shadow-1: none;
+  --shadow-2: 0 8px 24px rgb(0 0 0 / 0.35);
+
+  color-scheme: dark;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-text);
+  font-size: var(--fs-md);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.1; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; }
+a { color: var(--link); }
+code, kbd, .mono { font-family: var(--font-mono); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.tabular { font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

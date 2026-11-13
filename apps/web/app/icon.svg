@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EduFlow"><title>EduFlow</title>
+<rect width="64" height="64" rx="14" fill="#0F4C51"/>
+<path d="M18 15V49M18 15H33M18 32H33M18 49H33" stroke="#FAF8F3" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="42" cy="15" r="6.5" fill="#FAF8F3"/>
+<circle cx="42" cy="32" r="9" fill="#CDE832"/>
+<circle cx="42" cy="49" r="6.5" fill="#FAF8F3"/>
+</svg>
